@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "bahos",
+  "license": "The Unlicense",
+  "description": "rest api",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
