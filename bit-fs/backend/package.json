@@ -9,11 +9,17 @@
   "author": "bahos",
   "license": "The Unlicense",
   "description": "rest api",
-  "scripts": {
-    "start": "node src/main.js"
-  },
   "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js"
+  },
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "mongoose": "^8.10.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9"
   }
 }
