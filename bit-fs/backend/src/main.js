@@ -1,7 +1,16 @@
+import "dotenv/config";
+import ConexionMongodb from "./conexiones/baseDeDatos.js";
 import servidor from "./servidor.js";
 
-const puerto = 4100;
+const puerto = process.env.PORT;
 
-servidor.listen(puerto);
-console.log("Servidor escuchando por el puerto: " + puerto);
-/* mongodb+srv://alvarobahosc:<db_password>@cluster0.j3cnn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 */
+let mensaje = null;
+
+try {
+  servidor.listen(puerto);
+  mensaje = `Servidor escuchando por el puerto: ${puerto}`;
+} catch (error) {
+  mensaje = `Ocurrió un error, el servidor no está corriendo.\nError: ${error}`;
+} finally {
+  console.log(mensaje);
+}
