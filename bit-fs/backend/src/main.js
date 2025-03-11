@@ -3,7 +3,6 @@ import ConexionMongodb from "./conexiones/baseDeDatos.js";
 import servidor from "./servidor.js";
 
 const puerto = process.env.PORT;
-
 let mensaje = null;
 
 try {
